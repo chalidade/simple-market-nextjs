@@ -69,7 +69,7 @@ export default function DetailProduct() {
           </div>
           <div className="col-md-6 mt-5 text-left">
             <AtomButton
-              value={detail.category}
+              value={detail ? detail.category : "Product Category"}
               bg="#0086CF"
               radius="5px"
               width="130px"
@@ -78,16 +78,16 @@ export default function DetailProduct() {
             />
             <AtomText
               customClass="mt-3"
-              value={detail.title}
+              value={detail ? detail.title : "Product Title"}
               size="24px"
               lineHeight="30px"
               weight="700"
             />
-            <AtomText value={`Stock : ${detail.stock}`} color="#9D9D9D" size="18px" />
-            <AtomText value={detail.price} size="36px" weight="700" />
+            <AtomText value={`Stock : ${detail ? detail.stock : "0"}`} color="#9D9D9D" size="18px" />
+            <AtomText value={detail ? detail.price : "$50.00"} size="36px" weight="700" />
             <AtomText
               size="14px"
-              value={detail.desc}
+              value={detail ? detail.desc : "Product description"}
             />
             <div className="row mt-5">
               <div className="col-5">

@@ -51,19 +51,19 @@ export default function AtomTable({ products }) {
                           size="14px"
                           lineHeight="20px"
                           weight="400"
-                          value={product.title}
+                          value={product ? product.title : "Product Title"}
                         />
                       </div>
                     </div>
                   </td>
                   <td>
-                    <AtomText value={product.price} size="18px" weight="700" />
+                    <AtomText value={product ? product.price : "$50.00"} size="18px" weight="700" />
                   </td>
                   <td>
-                    <AtomText value={product.qty} size="18px" weight="700" />
+                    <AtomText value={product ? product.qty : "1"} size="18px" weight="700" />
                   </td>
                   <td>
-                    <AtomText value={product.total} size="18px" weight="700" />
+                    <AtomText value={product ? product.total : "$50.00"} size="18px" weight="700" />
                   </td>
                 </tr>
               </>

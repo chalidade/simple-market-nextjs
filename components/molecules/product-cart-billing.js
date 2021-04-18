@@ -24,9 +24,9 @@ export default function ProductCartBilling() {
                 />
               </div>
               <div className="col-9 text-left">
-                <AtomText value={product.sku} weight="700" size="14px" />
+                <AtomText value={product ? product.sku : "#SKU9011"} weight="700" size="14px" />
                 <AtomText
-                  value={product.price}
+                  value={product ? product.price : "$50.00"}
                   weight="700"
                   color="#9E9E9E"
                   size="14px"

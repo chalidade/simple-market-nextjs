@@ -18,13 +18,13 @@ export default function ProductList({ product }) {
         ></div>
         <AtomText
           customClass="text-left mt-2"
-          value={product.title}
+          value={product ? product.title : "Product Title"}
           weight="700"
           size="14px"
         />
         <AtomText
           customClass="text-left"
-          value={product.category}
+          value={product ? product.category : "Category"}
           margin="-10px 0px 0px 0px"
           size="9px"
         />
@@ -33,7 +33,7 @@ export default function ProductList({ product }) {
             <AtomText
               customClass="text-left"
               margin="20px 0px 0px 0px"
-              value={product.price}
+              value={product ? product.price : "$50.00"}
               weight="700"
               size="18px"
             />
@@ -46,7 +46,7 @@ export default function ProductList({ product }) {
           </div>
           <div className="col-3 mt-3">
             <img
-              className="    templateProductLove"
+              className="templateProductLove"
               src="/client/product_love.svg"
             />
           </div>
