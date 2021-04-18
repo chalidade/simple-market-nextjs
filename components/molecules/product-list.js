@@ -2,13 +2,15 @@ import AtomText from "../atoms/text";
 import AtomButton from "../atoms/button";
 
 export default function ProductList({ product }) {
+  let default_image = "/product/product_1.svg";
+
   return (
     <>
       <div className="templateProductDiv">
         <div
           className="templateProductImage"
           style={{
-            background: `url(${product.image[0]})`,
+            background: `url(${product ? product.image[0] : default_image})`,
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",

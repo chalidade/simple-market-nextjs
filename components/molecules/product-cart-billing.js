@@ -3,7 +3,8 @@ import AtomText from "../../components/atoms/text";
 import { productCart } from "../../components/variabels/client";
 
 export default function ProductCartBilling() {
-  const cart = productCart();
+  const cart        = productCart();
+  let default_image = "/product/product_1.svg";
   return (
     <>
       {cart.map((product) => {
@@ -12,7 +13,7 @@ export default function ProductCartBilling() {
             <div className="row mt-2">
               <div className="col-3">
                 <AtomDiv
-                  image={product.image}
+                  image={product ? product.image : default_image}
                   width="50px"
                   border="1px solid #DCDCDC"
                   bgRepeat="no-repeat"

@@ -6,6 +6,8 @@ import AtomButton from "../../components/atoms/button";
 import AtomDiv from "../../components/atoms/div";
 
 export default function AtomTable({ products }) {
+  let default_image = "/product/product_1.svg";
+
   return (
     <>
       <Table responsive="sm">
@@ -38,7 +40,7 @@ export default function AtomTable({ products }) {
                           radius="50px"
                           width="71px"
                           height="71px"
-                          image={product.image}
+                          image={product ? product.image : default_image}
                           bgRepeat="no-repeat"
                           bgPosition="center"
                           bgSize="60%"

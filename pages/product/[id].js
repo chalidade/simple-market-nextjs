@@ -7,9 +7,10 @@ import { product } from "../../components/variabels/client";
 
 
 export default function DetailProduct() {
-  const router    = useRouter();
-  const products  = product();
-  const detail    = products[router.query.id];
+  const router      = useRouter();
+  const products    = product();
+  const detail      = products[router.query.id];
+  let default_image = "/product/product_1.svg";
 
   return (
     <>
@@ -22,7 +23,7 @@ export default function DetailProduct() {
               radius="10px"
               width="80%"
               height="402px"
-              image={detail.image[0]}
+              image={detail ? detail.image[0] : default_image}
               bgRepeat="no-repeat"
               bgPosition="center"
               bgSize="70%"
@@ -34,7 +35,7 @@ export default function DetailProduct() {
                   radius="10px"
                   width="115px"
                   height="115px"
-                  image={detail.image[1]}
+                  image={detail ? detail.image[1] : default_image}
                   bgRepeat="no-repeat"
                   bgPosition="center"
                   bgSize="70%"
@@ -46,7 +47,7 @@ export default function DetailProduct() {
                   radius="10px"
                   width="115px"
                   height="115px"
-                  image={detail.image[2]}
+                  image={detail ? detail.image[2] : default_image}
                   bgRepeat="no-repeat"
                   bgPosition="center"
                   bgSize="70%"
@@ -58,7 +59,7 @@ export default function DetailProduct() {
                   radius="10px"
                   width="115px"
                   height="115px"
-                  image={detail.image[3]}
+                  image={detail ? detail.image[3] : default_image}
                   bgRepeat="no-repeat"
                   bgPosition="center"
                   bgSize="70%"
